@@ -1,0 +1,26 @@
+.you {
+  color: yellowgreen;
+}
+
+//phần admin
+#components-layout-demo-side .logo {
+  height: 32px;
+  margin: 16px;
+  // background: rgba(255, 255, 255, 0.3);
+}
+.site-layout .site-layout-background {
+  // width: 100%;
+  // background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  //   url(../assets/img/poster.jpg);
+  // background-position: center;
+  // background-size: cover;
+  // justify-content: center;
+
+  display: none;
+}
+
+.table-bordered {
+  td {
+    border: none !important;
+  }
+}

@@ -1,0 +1,159 @@
+header{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 15px rgba(0,0,0,.3);
+    padding: 10px 0;
+    .header__menu{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        .header__menu-logo{
+            .logo{
+                width: 50px;
+            }
+        }
+        .header__menu-bar{
+           
+            .header__menu-list {
+                display: flex;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                .list__item{
+                    a{
+                        @include styleText($color-black-1, $fs-3, $fw-2);
+                        padding: 10px;
+                        transition: all 0.3s;
+                        &:hover{
+                            color: orangered;
+                        }
+                    }
+                }
+            }
+        }
+       
+        .header__menu-right{
+            .header__menu-icon{
+                display: none;
+                .iconMenu{
+                    width: 30px;
+                }
+            }
+            .nav__input:checked ~ .header__menu-overlay{
+                display: block;
+            }
+            .nav__input:checked ~ .nav__mobile{
+                transform: translateX(0);
+                opacity: 1;
+            }
+            .header__menu-overlay{
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: rgba(0, 0, 0, 0.541);
+                display: none;
+                animation: fadein linear 0.3s;
+            }
+            .nav__mobile{
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 10;
+                width: 50%;
+                max-width: 100%;
+                background-color: white;
+                transform: translateX(100%);
+                opacity: 0;
+                transition: all linear 0.5s;
+                .nav__mobile-userLogin{
+                    margin: 0;
+                    position: relative;
+                    padding:10px 24px;
+                    display: flex;
+                    align-items: center;
+                    .user__icon{
+                        font-size: 40px;
+                        color: #9b9b9b;
+                        margin-right: 10px;
+                    }
+                    .user__login{
+                        font-size: 15px;
+                        color: black;
+                    }
+                    .user__arrow{
+                        position: absolute;
+                        transform: translateY(-50%);
+                        right: 20px;
+                        top: 50%;
+                        font-size: 20px;
+                        color: #9b9b9b;
+                    }
+                }
+                .nav__mobile-list{
+                    .nav__mobile-link{
+                        color: black;
+                        display: block;
+                        padding: 10px;
+                        font-size: 20px;
+                    }
+                }
+            }
+            .header__menu-user{
+                display: flex;
+                align-items: center;
+                .user__item{
+                    .user__item-link{
+                        padding: 10px;
+                        @include styleText($color-black-1, $fs-2,$fw-normal);
+                        .logo_dangNhap{
+                            width: 30px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+                .hideMenu{
+                    display: none;
+                }
+            }
+        }
+        
+    }
+}
+@keyframes fadein {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@include responsive("medium"){
+    header{
+        position: unset;
+        .header__menu{  
+            .header__menu-bar{
+                display: none;
+            }
+            .header__menu-right{
+                .header__menu-icon{
+                    display: block;
+                }
+                .header__menu-user{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+

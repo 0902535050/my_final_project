@@ -1,0 +1,43 @@
+@mixin styleText($color,$fs,$fw){
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+@mixin styleButton($bg-color,$pd-y, $pd-x,$radius){
+    background-color:$bg-color ;
+    padding: $pd-y $pd-x;
+    border-radius: $radius;
+}
+@mixin styleButtonGradient($bg-color1,$bg-color2,$pd-y, $pd-x,$radius){
+    background-color: linear-gradient(to left,$bg-color1,$bg-color2 100%);
+    padding: $pd-y $pd-x;
+    border-radius: $radius;
+	
+}
+@mixin styleButtonShowMore($border-color,$bg-color,$pd-y, $pd-x,$radius){
+	border: 1px solid $border-color;
+    background-color:$bg-color ;
+    padding: $pd-y $pd-x;
+    border-radius: $radius;
+}
+@mixin styleButtonHover($bd-color,$bg-color,$color){
+    border-color: $bd-color;
+    background-color: $bg-color;
+    color: $color;
+}
+@mixin animation($animation,$second, $type){
+    animation: $animation $second $type;
+}
+
+//responsive
+@mixin responsive($screen){
+       @if(map-has-key($map:$breakpoints , $key:$screen )){
+        $value: map-get($map:$breakpoints , $key:$screen );
+        @media screen and (max-width:$value){
+            @content;
+        }
+    }
+    @else{
+        @warn 'incorrect screen size';
+    }
+}

@@ -1,0 +1,36 @@
+//Helper
+@import "./Helper/variables";
+@import "./Helper/mixin";
+
+//Vendor
+
+//Base
+@import "./Base/reset";
+
+//Components
+@import "./Components/button";
+@import "./Components/spanButton";
+
+//Layouts
+@import "./Layouts/header";
+@import "./Layouts/login";
+@import "./Layouts/headermini";
+@import "./Layouts/Home/home";
+@import "./Layouts/Home/chiTietPhim";
+@import "./Layouts/Home/progresBar";
+@import "./Layouts/Home/chiTietPhongVe";
+@import "./Layouts/Home/chiTietCumRap";
+@import "./Layouts/Home/selectMovies";
+@import "./Layouts/signup";
+@import "./Layouts/footer";
+//Pages
+
+@import "./Pages/User/dangKy";
+@import "./Pages/User/dangNhap";
+@import "./Pages/User/capNhat";
+@import "./Pages/User/thongTinCaNhan";
+//Theme
+@import "./Helper//animation";
+
+//eltr
+@import "../Page/Admin/SCSSadmin/tong";

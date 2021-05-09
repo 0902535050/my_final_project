@@ -1,0 +1,8 @@
+.span_btn-red{
+	@include styleButton($color-red-0,$pd-0,$pd-1,$border-radius);
+	@include styleText($color-white-0,$fs-2,$fw-2);
+}
+.span_btn-green{
+	@include styleButton($color-green-0,$pd-0,$pd-1,$border-radius);
+	@include styleText($color-white-0,$fs-2,$fw-2);
+}

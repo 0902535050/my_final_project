@@ -1,0 +1,114 @@
+.SignUp_content {
+    height: 1024px;
+    width: 100%;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/img/poster.jpg);
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    .SignUp_loginPic{
+        width: 60%;
+        height: 70%;
+        background: rgb(255, 255, 255);
+        border-radius: 20px;
+        box-shadow: 5px 7px 10px 5px gray;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .SignUp_pic{
+            width: 60%;
+            height: 100%;
+            background-image: url(../assets/img/movie2.gif);
+            background-position: center;
+            background-size: cover;
+        }
+        .SignUp_login{
+            width: 40%;
+            text-align: center;
+            padding: $pd-4;
+            .form-group {
+                p {
+                    text-align: left;
+                }
+                .formSigup{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 20px;
+                    padding: $pd-0 $pd-3;
+                    background: #f0f0f0;
+                    i{
+                        color: #acacac;
+                    }
+                    input{
+                        background: none;
+                        outline: none;
+                        border: none;
+                        &:focus{
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+   
+    
+}
+// @media only screen and (max-width: 500px) {
+//     .SignUp_loginPic{
+//         width: 100% !important;
+//         height: 100% !important;
+//         border-radius: 0 !important;
+//         box-shadow: none !important;
+//         .SignUp_pic{
+//             display: none;
+//         }
+//         .SignUp_login{
+//             width: 100% !important;
+//         }
+//     }
+// }
+// @media only screen and (min-width: 376px) and (max-width: 1024px) {
+//     .SignUp_pic{
+//         display: none;
+//     }
+//     .SignUp_login{
+//         width: 100% !important;
+//     }
+// }
+@include responsive("small") {
+    .SignUp_loginPic{
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        .SignUp_pic{
+            display: none;
+        }
+        .SignUp_login{
+            width: 100% !important;
+            .text{
+                flex-direction: column;
+            }
+        }
+    }
+}
+@include responsive("large") {
+    .SignUp_pic{
+        display: none;
+    }
+    .SignUp_login{
+        width: 100% !important;
+    }
+}
+@include responsive("extra-large") {
+    .SignUp_pic{
+        width: 40% !important;
+    }
+    .SignUp_login{
+        width: 60% !important;
+    }
+}

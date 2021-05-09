@@ -1,0 +1,214 @@
+.personalInfomation {
+    .personalInfomation__banner{
+        width: 80%;
+        margin: auto;
+        img{
+            width: 100%;
+            border-radius: 10px;
+            margin: 50px 0;
+        }
+    }
+    .personalInfomation__container {
+        max-width: 1000px;
+        margin: auto;
+        .infomation__title {
+            .nav-tabs {
+                justify-content: center;
+                border: none;
+                a {
+                    font-size: 20px;
+                    color: black;
+                    font-weight: normal;
+                    border: none;
+                    transition: all 0.5s;
+                    &:hover {
+                        transform: scale(1.1, 1.1);
+                        border: none;
+                    }
+                }
+            }
+        }
+        .nav-tabs .nav-item.show .nav-link,
+        .nav-tabs .nav-link.active {
+            color: white;
+            border: none;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background-color: #3b80f3;
+            &:hover {
+                transform: none;
+            }
+        }
+        .infomation__content{
+            background-color: white;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid gray;
+            .personal__information {
+                padding: 25px;
+                width: 100%;
+                .account__left, .account__right{
+                    display: flex;
+                    flex-direction: column;
+                    word-wrap: break-word;
+                    p{
+                        font-weight: bold;
+                        font-size: 20px;
+                        span{
+                            font-weight: normal;
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+            .history__booking {
+                width: 100%;
+                .history__booking-content{
+                    padding: 20px;
+                    position: relative;
+                    display: flex;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        width: calc(100% - 40px);
+                        transform: translateX(-50%);
+                        border-bottom: 2px solid rgba(184, 182, 182, 0.88);
+                    }
+                    .history_booking-left{
+                        width: 35%;
+                        margin-right: 10px;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .history_booking-right{
+                        width: 65%;
+                        .right__ticket{
+                            .right__ticket-logo{
+                                img{
+                                    width: 150px;
+                                    height: 150px;
+                                }
+                            }
+                            .right__ticket-info{
+                                .info__nameCinema{
+                                    font-size: 24px;
+                                    color: orangered;
+                                    font-weight: bold;
+                                    margin: 10px 0;
+                                }
+                                p{
+                                    font-size: 20px;
+                                    color: black;
+                                    font-weight: bold;
+                                    margin: 0;
+                                    .info__nameMovie, .info__day, .info__cinemaNumber, .info__chair{
+                                        font-size: 15px;
+                                        color: black;
+                                        font-weight: normal;
+                                    }
+                                }
+                             }
+                        }
+                    }
+                }
+            }
+            .history__booking::-webkit-scrollbar{
+                width: 5px;
+                background-color: #ddd;
+            }
+            .history__booking::-webkit-scrollbar-thumb{
+                background-color: gray;
+            }
+            .history__booking::-webkit-scrollbar{
+                width: 5px;
+                background-color: #ddd;
+            }
+            .history__booking::-webkit-scrollbar-thumb{
+                background-color: gray;
+            }
+        }
+    }
+}  
+@media screen and (max-width: 576px){
+    .personalInfomation{
+        .personalInfomation__container{
+            .history__booking{
+                .history__booking-content{
+                    flex-direction: column;
+                    .history_booking-left{
+                        width: 100% !important;
+                        margin: 0 !important;
+                    }
+                    .history_booking-right{
+                        margin-top: 10px !important;
+                        width: 100% !important;
+                        .right__ticket{
+                            display: flex !important; 
+                            .right__ticket-logo{
+                                width: 30% !important;
+                                margin-right: 5px !important;
+                                img{
+                                    width: 100% !important;
+                                }
+                            }
+                            .right__ticket-info{
+                                width: 70% !important;
+                                .info__nameCinema{
+                                    margin: 0 !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+    // @media only screen and (max-width: 375px) {
+    //     .PersonalInfo_conent{
+    //         .personalInfo_info {
+    //             .personal_title {
+    //                 margin-left: 0 ;
+    //             }
+    //             .personal_information_menu{
+    //                 flex-direction: column ;
+    //                 .personalInfo_left, .personalInfo_right{
+    //                     max-width: 100%;
+    //                 }
+    //             }
+    //             .history_booking{
+    //                 border: none;
+    //                 .history_booking_content{
+    //                     border: 1px solid;
+    //                     padding: 5px;
+    //                 }
+    //                 .info_ticket{
+    //                     margin: 0 !important;
+    //                     img{
+    //                         display: none;
+    //                     }
+    //                     .info_ticket_text{
+    //                         margin: 0 !important;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+    // @media only screen and (min-width: 376px)  and (max-width: 768px){
+    //     .PersonalInfo_conent{
+    //         .personalInfo_info{
+    //             .history_booking{
+    //                 .history_booking_right{
+    //                     img{
+    //                         width: 50%;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+    

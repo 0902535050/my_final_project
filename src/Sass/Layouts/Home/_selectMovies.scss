@@ -1,0 +1,35 @@
+.selectMovies{
+    display: flex;
+    max-width: 940px;
+    margin: auto;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    z-index: 2;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .selectMovies_movies, .selectMovies_cinemas, .selectMovies_dates, .selectMovies_hours{
+        padding-right: $pd-1;
+        border-right: 1px solid $color-gray-1;
+        margin-right: $mg-2;
+        width: 100%;
+        .btn:focus
+        {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+    .selectMovies_movies{
+        width: 30%;
+    }
+    .selectMovies_cinemas, .selectMovies_dates, .selectMovies_hours, .selectMovies_booking{
+        width: calc(70% / 4);
+    }
+}

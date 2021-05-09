@@ -1,0 +1,78 @@
+//scss khung tim kiem
+.container-1 {
+  width: 100%;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+
+  padding-bottom: 30px;
+}
+
+.container-1 input#search {
+  width: 100%;
+  height: 50px;
+  //   background: #001529;
+  background: #ffffff;
+  border: none;
+  font-size: 10pt;
+  float: left;
+  color: #63717f;
+  padding-left: 45px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  //   transition: all 0.5s;
+}
+
+//input
+.container-1 input#search::-webkit-input-placeholder {
+  color: #65737e;
+}
+
+.container-1 input#search:-moz-placeholder {
+  /* Firefox 18- */
+  color: #65737e;
+}
+
+.container-1 input#search::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #65737e;
+}
+
+.container-1 input#search:-ms-input-placeholder {
+  color: #65737e;
+}
+
+//icon
+.container-1 .icon {
+  position: absolute;
+  top: 50%;
+  margin-left: 17px;
+  margin-top: 0px;
+  z-index: 1;
+  color: #4f5b66;
+}
+
+//hover
+.container-1 input#search:hover,
+.container-1 input#search:focus,
+.container-1 input#search:active {
+  outline: none;
+  background: #ffffff;
+}
+
+.site-calendar-demo-card {
+  width: 300px;
+  border: 1px solid #f0f0f0;
+  border-radius: 2px;
+}
+
+.text-overflow {
+  text-overflow: ellipsis;
+}
+
+//quan lý người dùng
+.input-group {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

@@ -1,0 +1,19 @@
+.btn-redGradient{
+	@include styleButtonGradient($color-red-0,$color-red-1,$pd-2,$pd-2,$border-radius);
+	@include styleText($color-white-0,$fs-4,$fw-normal);
+}
+.btn-red{
+	@include styleButton($color-red-0,$pd-2,$pd-2,$border-radius);
+	@include styleText($color-white-0,$fs-0,$fw-normal);
+}
+.btn-black{
+    @include styleButton($color-black-1,$pd-2,$pd-5,$border-radius);
+	@include styleText($color-white-0,$fs-2,$fw-1);
+}
+.btn-showMore{
+    @include styleButtonShowMore($color-gray-0,$color-white-0,$pd-1,$pd-5,$border-radius);
+    @include styleText($color-gray-0,$fs-2,$fw-normal);
+    &:hover{
+        @include styleButtonHover($color-red-0,$color-red-0,$color-white-0);
+    }
+}

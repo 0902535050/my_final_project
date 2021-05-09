@@ -1,0 +1,91 @@
+footer{
+    background-color: $color-black-2;
+    color: $color-gray-0;
+    padding: $pd-4 0;
+    letter-spacing: 0.5px;
+    width: 100%;
+   .container{
+       max-width: 80%;
+       margin-top: $mg-2;
+   }
+    .footer__content{
+        .footer__title{
+            @include styleText($color-white-0,$fs-1,$fw-2);
+        }
+        .footer__link{
+            @include styleText($color-gray-0,$fs-1,$fw-2);
+            display: block;
+            line-height: 2.3;
+            &:hover{
+                color: $color-white-0;
+            }
+        }
+        .footer__icon{
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+            background-color: $color-white-0;
+            margin-right: $mg-2 - 5;
+            margin-bottom: $mg-2 - 5;
+        }
+        .footer__iconMobile{
+            width: 30px;
+            height: 30px;
+            margin-right: $mg-2;
+            margin-bottom: $mg-2;
+        }
+    }
+    .hrFooter{
+        border-top: 1px solid #4a4a4a;
+    }
+    .footer__copyright{
+        .zinoLogo{
+            width: 80px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .registerLogo{
+            width: 130px;
+            height: auto;
+            float: right;
+        }
+        .footer__info{
+            padding-left: $pd-5;
+            span{
+                display: block;
+                line-height: 1.8;
+                @include styleText($color-gray-0,$fs-1,$fw-1);
+            }
+            span:first-child{
+                color: $color-white-0;
+            }
+        }
+    }
+   
+}
+@include responsive("extra-large"){
+    .container{
+        max-width: 95% !important;
+    }
+}
+@include responsive("large"){
+    .container{
+        max-width: 95% !important;
+    }
+    .footer__title, .policy__left, .footer__partners, .footer__systems{
+        display: none;
+    }
+    .footer__policy .policy__right{
+        display: flex;
+        .footer__link{
+            margin-left: $mg-2;
+        }
+       
+    }
+    .footer__copyright .footer__info{
+        align-items: center;
+
+    }
+}
+
+
